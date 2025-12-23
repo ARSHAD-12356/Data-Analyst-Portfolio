@@ -27,48 +27,48 @@ export function Experience() {
 
   const experiences = [
     {
-      role: "Data Analytics Intern",
-      company: "Tech Insights Pvt Ltd",
+      role: "Data Analyst Intern",
+      company: "Elevate Labs",
       location: "Remote",
-      period: "Jun 2024 - Aug 2024",
+      period: "Aug 2025 - Oct 2025",
       description:
-        "Assisted in analyzing business data and creating interactive dashboards to support data-driven decision making.",
+        "Specialized in data extraction, cleaning, and modeling using SQL and Power Query. Collaborated on creating visual reports and dashboards.",
       achievements: [
-        "Built 5+ interactive dashboards using Power BI and Excel",
-        "Analyzed customer data to identify trends and patterns",
-        "Collaborated with team to optimize data collection processes",
+        "Performed data extraction, cleaning, and modeling using SQL and Power Query",
+        "Collaborated on designing visual reports and interactive dashboards",
+        "Utilized tools like Power BI, DAX, Vlookup, and Pivot Tables to drive insights",
       ],
     },
     {
-      role: "Data Analysis Project",
-      company: "Academic Capstone Project",
-      location: "University",
-      period: "Jan 2024 - May 2024",
-      description: "Led comprehensive data analysis project focusing on sales forecasting and customer segmentation.",
+      role: "Data Analyst Intern (Virtual)",
+      company: "Deloitte, Australia",
+      location: "Remote",
+      period: "Jan 2023 - Jul 2023",
+      description: "Completed a comprehensive job simulation focusing on data analysis and validation.",
       achievements: [
-        "Processed and cleaned 50K+ records using Python and Pandas",
-        "Developed predictive models with 85% accuracy",
-        "Created visualizations using Matplotlib and Seaborn",
+        "Completed Job Simulation involving realistic data analysis scenarios",
+        "Conducted forensic dataset interpretation using Excel, SQL, and Python",
+        "Validated data integrity and meaningful patterns for business decisions",
       ],
     },
   ]
 
   const education = [
     {
-      degree: "Bachelor of Science in Data Science",
-      institution: "ABC University",
-      location: "City, Country",
-      period: "2021 - 2024",
-      gpa: "8.5 CGPA",
-      details: "Specialized in Statistical Analysis, Machine Learning, and Data Visualization",
+      degree: "Bachelor of Engineering in Information Technology",
+      institution: "Rungta College Of Engineering And Technology",
+      location: "Bhilai, India",
+      period: "2023 - 2027",
+      gpa: "Pursuing",
+      details: "Focused on Data Science, Database Management, and Software Engineering",
     },
     {
-      degree: "Higher Secondary Education (12th Grade)",
-      institution: "XYZ Higher Secondary School",
-      location: "City, Country",
-      period: "2019 - 2021",
-      gpa: "85%",
-      details: "Major subjects: Mathematics, Statistics, Computer Science",
+      degree: "Certifications",
+      institution: "Various Providers",
+      location: "Online",
+      period: "2023 - Present",
+      gpa: "Completed",
+      details: "Python For Data Science (IBM), Google Analytics (Google), Data Analytics with Python (NPTEL), Tata Data Visualization",
     },
   ]
 
