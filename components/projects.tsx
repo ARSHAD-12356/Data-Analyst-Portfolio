@@ -6,63 +6,11 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Filter } from "lucide-react"
 
+import Link from "next/link"
+import { projects } from "@/lib/projects"
+
 export function Projects() {
   const [activeFilter, setActiveFilter] = useState("All")
-
-  const projects = [
-    {
-      title: "Motorola Sales Analysis",
-      problem: "Track and analyze sales metrics using interactive dashboards to support decision-making.",
-      dataset: "Sales data records",
-      tools: ["Power BI", "DAX", "Data Modeling"],
-      insights: [
-        "Created interactive dashboards with DAX measures",
-        "Optimized data models for performance",
-        "Visualized key sales trends and metrics",
-      ],
-      category: "Power BI",
-      image: "/dashboard-sales-analytics.jpg",
-    },
-    {
-      title: "Sales Dashboard",
-      problem: "Perform end-to-end sales analysis focusing on profit, customer segments, and regions.",
-      dataset: "Retail sales dataset",
-      tools: ["Tableau", "SQL", "Data Visualization"],
-      insights: [
-        "Analyzed profit margins across different regions",
-        "Identified key customer segments",
-        "Created comprehensive visual reports on Tableau Public",
-      ],
-      category: "Tableau",
-      image: "/supply-chain-visualization.jpg",
-    },
-    {
-      title: "Road Accident Analysis",
-      problem: "Analyze casualty data to identify patterns and improve road safety awareness.",
-      dataset: "Road accident statistics",
-      tools: ["Excel", "Pivot Tables", "Slicers"],
-      insights: [
-        "Built dashboard using PivotTables and Slicers",
-        "Analyzed casualty trends by location and time",
-        "Provided data-driven safety recommendations",
-      ],
-      category: "Excel",
-      image: "/financial-dashboard.jpg",
-    },
-    {
-      title: "Customer Churn Analysis",
-      problem: "Identify factors contributing to customer churn and develop retention strategies.",
-      dataset: "Customer behavior data",
-      tools: ["Python", "Pandas", "Matplotlib"],
-      insights: [
-        "Conducted EDA to find churn drivers",
-        "Visualized customer retention patterns",
-        "Proposed actionable strategies to reduce churn",
-      ],
-      category: "Python",
-      image: "/customer-segmentation-chart.jpg",
-    },
-  ]
 
   const filters = ["All", "Power BI", "Python", "Excel", "Tableau", "SQL"]
 
@@ -149,11 +97,14 @@ export function Projects() {
                   </div>
 
                   <Button
+                    asChild
                     variant="outline"
                     className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all bg-transparent border-primary/30 hover:scale-105"
                   >
-                    View Details
-                    <ExternalLink className="ml-2 w-4 h-4" />
+                    <Link href={`/projects/${project.slug}`}>
+                      View Details
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </Link>
                   </Button>
                 </div>
 
