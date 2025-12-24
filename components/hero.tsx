@@ -46,7 +46,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="group hover:scale-105 transition-all duration-300 glass border-primary/30 hover:bg-sky-500/20 hover:border-sky-400 text-foreground bg-transparent"
-                onClick={() => window.open("/Resume/Sample%20Resume_2025%20(1).pdf", "_blank")}
+                onClick={() => window.open("/Resume/DAnalystArshad.pdf", "_blank")}
               >
                 <Download className="mr-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
                 Download Resume

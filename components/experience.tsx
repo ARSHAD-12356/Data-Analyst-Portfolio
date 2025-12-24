@@ -43,7 +43,7 @@ export function Experience() {
       role: "Data Analyst Intern (Virtual)",
       company: "Deloitte, Australia",
       location: "Remote",
-      period: "Jan 2023 - Jul 2023",
+      period: "Jun 2025 - Jul 2025",
       description: "Completed a comprehensive job simulation focusing on data analysis and validation.",
       achievements: [
         "Completed Job Simulation involving realistic data analysis scenarios",

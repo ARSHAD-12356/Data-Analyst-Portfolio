@@ -15,9 +15,9 @@ import { AIChatbot } from "@/components/ai-chatbot"
 export default function Portfolio() {
   return (
     <ThemeProvider>
-      <main className="min-h-screen bg-background relative overflow-hidden">
+      <Navbar />
+      <main className="min-h-screen bg-background relative overflow-hidden pt-20">
         <AnimatedBackground />
-        <Navbar />
 
         <div id="home">
           <Hero />
