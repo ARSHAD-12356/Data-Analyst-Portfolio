@@ -28,40 +28,28 @@ export function Certifications() {
 
   const certifications = [
     {
-      title: "Microsoft Certified: Data Analyst Associate",
-      issuer: "Microsoft",
-      year: "2023",
-      skills: ["Power BI", "Data Modeling", "DAX"],
-    },
-    {
-      title: "Google Data Analytics Professional Certificate",
-      issuer: "Google",
-      year: "2022",
-      skills: ["SQL", "Data Visualization", "R Programming"],
-    },
-    {
-      title: "Tableau Desktop Specialist",
-      issuer: "Tableau",
-      year: "2022",
-      skills: ["Tableau", "Data Visualization", "Analytics"],
-    },
-    {
-      title: "Python for Data Science",
+      title: "Python For Data Science",
       issuer: "IBM",
-      year: "2021",
-      skills: ["Python", "Pandas", "NumPy", "Matplotlib"],
+      year: "2023",
+      skills: ["Python", "Data Science"],
     },
     {
-      title: "Advanced SQL for Data Analytics",
-      issuer: "Coursera",
-      year: "2021",
-      skills: ["SQL", "Database Management", "Query Optimization"],
+      title: "Google Analytics",
+      issuer: "Google",
+      year: "2023",
+      skills: ["Analytics", "Data Analysis"],
     },
     {
-      title: "Excel Skills for Business Specialization",
-      issuer: "Macquarie University",
-      year: "2020",
-      skills: ["Excel", "Pivot Tables", "Power Query"],
+      title: "Tata Data Visualization",
+      issuer: "TATA",
+      year: "2023",
+      skills: ["Data Visualization", "Dashboarding"],
+    },
+    {
+      title: "Gen-Ai Powered Data Analytics",
+      issuer: "TATA",
+      year: "2024",
+      skills: ["Generative AI", "Data Analytics"],
     },
   ]
 
@@ -81,9 +69,8 @@ export function Certifications() {
           {certifications.map((cert, index) => (
             <Card
               key={index}
-              className={`p-6 bg-card/50 backdrop-blur-md border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 group cursor-pointer ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
+              className={`p-6 bg-card/50 backdrop-blur-md border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 group cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start justify-between mb-4">

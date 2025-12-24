@@ -27,28 +27,16 @@ export function Experience() {
 
   const experiences = [
     {
-      role: "Data Analyst Intern",
-      company: "Elevate Labs",
-      location: "Remote",
-      period: "Aug 2025 - Oct 2025",
+      role: "Fresher",
+      company: "Open to Opportunities",
+      location: "Bhilai, India",
+      period: "Present",
       description:
-        "Specialized in data extraction, cleaning, and modeling using SQL and Power Query. Collaborated on creating visual reports and dashboards.",
+        "Data Analyst with hands-on experience in Python, SQL, Excel, Power BI, and Tableau, specializing in data visualization, reporting, and dashboarding.",
       achievements: [
-        "Performed data extraction, cleaning, and modeling using SQL and Power Query",
-        "Collaborated on designing visual reports and interactive dashboards",
-        "Utilized tools like Power BI, DAX, Vlookup, and Pivot Tables to drive insights",
-      ],
-    },
-    {
-      role: "Data Analyst Intern (Virtual)",
-      company: "Deloitte, Australia",
-      location: "Remote",
-      period: "Jun 2025 - Jul 2025",
-      description: "Completed a comprehensive job simulation focusing on data analysis and validation.",
-      achievements: [
-        "Completed Job Simulation involving realistic data analysis scenarios",
-        "Conducted forensic dataset interpretation using Excel, SQL, and Python",
-        "Validated data integrity and meaningful patterns for business decisions",
+        "Conducted peer-level mentoring and concept explanations on Python, SQL, and Power BI",
+        "Assisted learners and peers in resolving doubts related to data analysis tasks",
+        "Strong focus on clear communication and data storytelling",
       ],
     },
   ]
@@ -58,17 +46,17 @@ export function Experience() {
       degree: "Bachelor of Engineering in Information Technology",
       institution: "Rungta College Of Engineering And Technology",
       location: "Bhilai, India",
-      period: "2023 - 2027",
-      gpa: "Pursuing",
+      period: "08/2023 – 06/2027",
+      gpa: "7.5 CGPA",
       details: "Focused on Data Science, Database Management, and Software Engineering",
     },
     {
-      degree: "Certifications",
-      institution: "Various Providers",
-      location: "Online",
-      period: "2023 - Present",
+      degree: "Intermediate (ISC)",
+      institution: "College Of Commerce Arts, And Science",
+      location: "India",
+      period: "03/2021 – 04/2023",
       gpa: "Completed",
-      details: "Python For Data Science (IBM), Google Analytics (Google), Data Analytics with Python (NPTEL), Tata Data Visualization",
+      details: "Science Stream",
     },
   ]
 

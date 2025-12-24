@@ -43,13 +43,15 @@ export function Hero() {
                 <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="group hover:scale-105 transition-all duration-300 glass border-primary/30 hover:bg-sky-500/20 hover:border-sky-400 text-foreground bg-transparent"
-                onClick={() => window.open("/Resume/DAnalystArshad.pdf", "_blank")}
               >
-                <Download className="mr-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-                Download Resume
+                <a href="/Resume/DAnalystArshad.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                  Download Resume
+                </a>
               </Button>
               <Button
                 size="lg"
@@ -71,7 +73,7 @@ export function Hero() {
 
               <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-4 border-primary/20 glass group-hover:scale-105 transition-all duration-500 shadow-2xl lg:mr-12">
                 <img
-                  src="/images/ei-1695124277387-removebg-preview-20-283-29.png"
+                  src="/images/arshad-profile-3.jpg"
                   alt="Md Arshad Raza"
                   className="w-full h-full object-cover object-center scale-125"
                 />
