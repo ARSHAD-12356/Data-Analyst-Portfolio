@@ -6,7 +6,7 @@ import { AnimatedCounter } from "./animated-counter"
 
 export function Hero() {
   return (
-    <section className="min-h-[calc(100vh-80px)] flex items-center relative px-4 pt-8 pb-16 md:pt-12 md:pb-20">
+    <section className="min-h-[calc(100vh-80px)] flex items-center relative px-4 pt-4 pb-16 md:pt-8 md:pb-20">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
@@ -46,7 +46,7 @@ export function Hero() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="group hover:scale-105 transition-all duration-300 glass border-primary/30 hover:bg-sky-500/20 hover:border-sky-400 text-foreground bg-transparent"
+                className="group hover:scale-105 transition-all duration-300 border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary text-foreground bg-background/80 dark:bg-background/60"
               >
                 <a href="/Resume/DAnalystArshad.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 w-4 h-4 group-hover:-translate-y-1 transition-transform" />
@@ -56,7 +56,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group hover:scale-105 transition-all duration-300 glass border-accent/30 hover:bg-sky-500/20 hover:border-sky-400 text-foreground bg-transparent"
+                className="group hover:scale-105 transition-all duration-300 border-accent/30 hover:bg-primary hover:text-primary-foreground hover:border-primary text-foreground bg-background/80 dark:bg-background/60"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <Mail className="mr-2 w-4 h-4" />

@@ -16,7 +16,7 @@ export default function Portfolio() {
   return (
     <ThemeProvider>
       <Navbar />
-      <main className="min-h-screen bg-background relative overflow-hidden pt-20">
+      <main className="min-h-screen bg-background relative overflow-x-hidden" style={{ paddingTop: '80px' }}>
         <AnimatedBackground />
 
         <div id="home">

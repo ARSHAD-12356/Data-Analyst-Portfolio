@@ -26,17 +26,29 @@ export function Experience() {
   }, [])
 
   const experiences = [
+
     {
-      role: "Fresher",
-      company: "Open to Opportunities",
-      location: "Bhilai, India",
-      period: "Present",
+      role: "Data Analyst Intern",
+      company: "Elevate Labs",
+      location: "Remote",
+      period: "08/2025 – 10/2025",
       description:
-        "Data Analyst with hands-on experience in Python, SQL, Excel, Power BI, and Tableau, specializing in data visualization, reporting, and dashboarding.",
+        "Performed data extraction, cleaning, and modeling using SQL, Power Query, and Excel to ensure accurate and reliable analysis.",
       achievements: [
-        "Conducted peer-level mentoring and concept explanations on Python, SQL, and Power BI",
-        "Assisted learners and peers in resolving doubts related to data analysis tasks",
-        "Strong focus on clear communication and data storytelling",
+        "Collaborated with cross-functional teams to analyze business data and present insights through visual reports and dashboards",
+        "Tools used: Power BI desktop, Power BI service, Power query, DAX function, Vlookup, Pivot Table",
+      ],
+    },
+    {
+      role: "Data Analyst Intern",
+      company: "Deloitte, Australia",
+      location: "Remote",
+      period: "01/2023 – 07/2023",
+      description:
+        "Completed Deloitte’s Data Analytics Job Simulation, performing data analysis, validation, and insight generation on real-world business scenarios.",
+      achievements: [
+        "Applied Excel, SQL, and data visualization techniques to interpret forensic datasets and present findings in a clear, business-focused manner",
+        "Tools used: MS Excel, Power BI, Python",
       ],
     },
   ]
