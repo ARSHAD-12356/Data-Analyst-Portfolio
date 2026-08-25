@@ -17,32 +17,29 @@ const PORTFOLIO_DATA = {
     summary:
       "Data-driven professional with a proven track record of delivering actionable insights through advanced analytics and visualization. Specialized in identifying trends, optimizing processes, and supporting data-informed decision-making across various business domains.",
   },
-  education: {
-    degree: "Bachelor of Computer Applications (BCA)",
-    university: "Chhatrapati Shahu Ji Maharaj University, Kanpur",
-    year: "2021-2024",
-  },
-  experience: [
+  education: [
     {
-      role: "Data Analytics Intern",
-      company: "Tech Insights Pvt Ltd",
-      location: "Remote",
-      period: "Jun 2024 - Aug 2024",
-      achievements: [
-        "Built 5+ interactive dashboards using Power BI and Excel",
-        "Analyzed customer data to identify trends and patterns",
-        "Collaborated with team to optimize data collection processes",
-      ],
+      degree: "Bachelor of Engineering in Information Technology",
+      institution: "Rungta College of Engineering and Technology, Bhilai",
+      period: "Aug 2023 – Jun 2027",
+      gpa: "CGPA: 7.5/10",
     },
     {
-      role: "Data Analysis Project",
-      company: "Academic Capstone Project",
-      location: "University",
-      period: "Jan 2024 - May 2024",
+      degree: "Intermediate (ISC)",
+      institution: "College of Commerce, Arts and Science, Patna",
+      period: "Mar 2021 – Apr 2023",
+      gpa: "Score: 68%",
+    },
+  ],
+  experience: [
+    {
+      role: "Data & Business Analyst Intern",
+      company: "Analytic Career Connect (ACC)",
+      location: "Remote",
+      period: "Mar 2026 – Aug 2026",
       achievements: [
-        "Processed and cleaned 50K+ records using Python and Pandas",
-        "Developed predictive models with 85% accuracy",
-        "Created visualizations using Matplotlib and Seaborn",
+        "Analyze business data using Power BI and SQL to identify trends, patterns, and key insights that support business decision-making.",
+        "Prepare and maintain analytical reports and dashboards, transforming raw data into clear and actionable business insights for reporting and performance analysis.",
       ],
     },
   ],
@@ -66,6 +63,16 @@ const PORTFOLIO_DATA = {
     "Adaptability",
   ],
   projects: [
+    {
+      title: "E-Commerce: Customer Shopping Behavior Analysis",
+      problem: "Analyze customer shopping behavior, demographics, subscription trends, product performance, discount usage, and shipping patterns across 3,900 transactions",
+      tools: ["Python", "PostgreSQL", "SQL", "Power BI", "Pandas"],
+      insights: [
+        "Analyzed 3,900 transactions across 18 columns with Python & PostgreSQL",
+        "Segmented customers into New, Returning, and Loyal groups",
+        "Built interactive Power BI dashboard with revenue & subscription insights",
+      ],
+    },
     {
       title: "Sales Performance Dashboard",
       problem: "Track and analyze sales metrics across multiple regions",
@@ -120,12 +127,12 @@ const PORTFOLIO_DATA = {
     },
   ],
   certifications: [
-    { title: "Microsoft Certified: Data Analyst Associate", issuer: "Microsoft", year: "2023" },
-    { title: "Google Data Analytics Professional Certificate", issuer: "Google", year: "2022" },
-    { title: "Tableau Desktop Specialist", issuer: "Tableau", year: "2022" },
-    { title: "Python for Data Science", issuer: "IBM", year: "2021" },
-    { title: "Advanced SQL for Data Analytics", issuer: "Coursera", year: "2021" },
-    { title: "Excel Skills for Business Specialization", issuer: "Macquarie University", year: "2020" },
+    { title: "Microsoft Certified: Microsoft Fabric Analytic Engineer Associate", issuer: "Microsoft" },
+    { title: "Deloitte Data Analytics Job Simulation", issuer: "Deloitte" },
+    { title: "Tata Data Visualization: Empowering Business with Effective Insights", issuer: "Tata" },
+    { title: "Data Science - AI/ML", issuer: "Coding Spoon" },
+    { title: "AI & Machine Learning: Generative AI, Agentic Systems and MLOps Deployment", issuer: "Coding Spoon" },
+    { title: "Gen-AI Powered Data Analytics", issuer: "Tata" },
   ],
   contact: {
     phones: ["8873867316", "9142312801"],
@@ -174,7 +181,12 @@ export function AIChatbot() {
 
     // Education - exact information only
     if (input.match(/education|degree|study|qualification|university|college|academic/)) {
-      return `**Education**\n\nDegree: ${PORTFOLIO_DATA.education.degree}\nInstitution: ${PORTFOLIO_DATA.education.university}\nDuration: ${PORTFOLIO_DATA.education.year}`
+      return `**Education**\n\n${PORTFOLIO_DATA.education
+        .map(
+          (edu, i) =>
+            `${i + 1}. **${edu.degree}**\n   Institution: ${edu.institution}\n   Duration: ${edu.period}\n   Grade: ${edu.gpa}`,
+        )
+        .join("\n\n")}`
     }
 
     // Experience - no exaggeration
@@ -210,7 +222,7 @@ export function AIChatbot() {
 
     // Certifications - exact list
     if (input.match(/certifications?|certificates?|credentials?|certified/)) {
-      return `**Certifications** (${PORTFOLIO_DATA.certifications.length} total)\n\n${PORTFOLIO_DATA.certifications.map((c, i) => `${i + 1}. ${c.title}\n   Issued by: ${c.issuer} (${c.year})`).join("\n\n")}`
+      return `**Certifications** (${PORTFOLIO_DATA.certifications.length} total)\n\n${PORTFOLIO_DATA.certifications.map((c, i) => `${i + 1}. ${c.title}\n   Issued by: ${c.issuer}`).join("\n\n")}`
     }
 
     // Contact - EXACT information as specified

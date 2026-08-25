@@ -48,7 +48,7 @@ export function Hero() {
                 variant="outline"
                 className="group hover:scale-105 transition-all duration-300 border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary text-foreground bg-background/80 dark:bg-background/60"
               >
-                <a href="/Resume/DanalystArshad.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Resume/DanalystArshadFinal.pdf" target="_blank" rel="noopener noreferrer">
                   <FileText className="mr-2 w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
                   View Resume
                 </a>

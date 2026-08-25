@@ -26,38 +26,36 @@ export function Experience() {
   }, [])
 
   const experiences = [
-
     {
-      role: "Data Analyst Intern",
-      company: "Elevate Labs",
+      role: "Data & Business Analyst Intern",
+      company: "Analytic Career Connect (ACC)",
       location: "Remote",
-      period: "08/2025 – 10/2025",
+      period: "Mar 2026 – Aug 2026",
       description:
-        "Performed data extraction, cleaning, and modeling using SQL, Power Query, and Excel to ensure accurate and reliable analysis.",
+        "Analyze business data using Power BI and SQL to identify trends, patterns, and key insights that support business decision-making.",
       achievements: [
-        "Collaborated with cross-functional teams to analyze business data and present insights through visual reports and dashboards",
-        "Tools used: Power BI desktop, Power BI service, Power query, DAX function, Vlookup, Pivot Table",
+        "Analyze business data using Power BI and SQL to identify trends, patterns, and key insights that support business decision-making.",
+        "Prepare and maintain analytical reports and dashboards, transforming raw data into clear and actionable business insights for reporting and performance analysis.",
       ],
     },
-
   ]
 
   const education = [
     {
       degree: "Bachelor of Engineering in Information Technology",
-      institution: "Rungta College Of Engineering And Technology",
+      institution: "Rungta College of Engineering and Technology",
       location: "Bhilai, India",
-      period: "08/2023 – 06/2027",
+      period: "Aug 2023 – Jun 2027",
       gpa: "7.5 CGPA",
-      details: "Focused on Data Science, Database Management, and Software Engineering",
+      details: "Focused on Data Analytics, Information Technology, Software Engineering, and Database Management Systems.",
     },
     {
       degree: "Intermediate (ISC)",
-      institution: "College Of Commerce Arts, And Science",
-      location: "India",
-      period: "03/2021 – 04/2023",
-      gpa: "Completed",
-      details: "Science Stream",
+      institution: "College of Commerce, Arts and Science",
+      location: "Patna, India",
+      period: "Mar 2021 – Apr 2023",
+      gpa: "68%",
+      details: "Science Stream (ISC)",
     },
   ]
 

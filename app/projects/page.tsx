@@ -15,7 +15,7 @@ import { projects } from "@/lib/projects"
 export default function AllProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All")
 
-  const filters = ["All", "Power BI", "Python", "Excel", "Tableau", "SQL"]
+  const filters = ["All", "End-to-End", "Power BI", "Python", "Excel", "Tableau", "SQL"]
 
   const filteredProjects =
     activeFilter === "All"

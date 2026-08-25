@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const pdf = require('pdf-parse');
 
-const resumePath = path.join(__dirname, 'public', 'Resume', 'DAnalystArshad.pdf');
+const resumePath = path.join(__dirname, 'public', 'Resume', 'DanalystArshadFinal.pdf');
 const outputPath = path.join(__dirname, 'resume_content.txt');
 
 console.log(`Reading from: ${resumePath}`);
