@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, CheckCircle2, ShieldCheck } from "lucide-react"
+import { Award, CheckCircle2, ShieldCheck, ExternalLink } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 export interface Certificate {
@@ -12,6 +12,7 @@ export interface Certificate {
   skills: string[]
   issuerColor: string
   badgeColor: string
+  link: string
 }
 
 export function Certifications() {
@@ -43,6 +44,7 @@ export function Certifications() {
       skills: ["Microsoft Fabric", "Data Engineering", "Power BI", "Analytics"],
       issuerColor: "from-blue-600/20 to-sky-500/20",
       badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
+      link: "https://learn.microsoft.com/en-us/users/mdarshadraza-9533/credentials/3663bee1c0f5bcda?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     },
     {
       title: "Deloitte Data Analytics Job Simulation",
@@ -51,6 +53,7 @@ export function Certifications() {
       skills: ["Data Analytics", "Business Insights", "Data Visualization"],
       issuerColor: "from-emerald-600/20 to-teal-500/20",
       badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_RFMxjsKGNCoN8v4eH_1751344385872_completion_certificate.pdf",
     },
     {
       title: "Tata Data Visualization: Empowering Business with Effective Insights",
@@ -59,6 +62,7 @@ export function Certifications() {
       skills: ["Data Visualization", "Dashboarding", "Executive Reporting"],
       issuerColor: "from-indigo-600/20 to-purple-500/20",
       badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/30",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_RFMxjsKGNCoN8v4eH_1756805632601_completion_certificate.pdf",
     },
     {
       title: "Data Science - AI/ML",
@@ -67,6 +71,7 @@ export function Certifications() {
       skills: ["Data Science", "Python", "Machine Learning", "EDA"],
       issuerColor: "from-amber-600/20 to-orange-500/20",
       badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/30",
+      link: "https://github.com/ARSHAD-12356/Certification/blob/main/Data%20Sceince.pdf",
     },
     {
       title: "AI & Machine Learning: Generative AI, Agentic Systems and MLOps Deployment",
@@ -75,6 +80,7 @@ export function Certifications() {
       skills: ["Generative AI", "Agentic Systems", "MLOps", "Deployment"],
       issuerColor: "from-violet-600/20 to-fuchsia-500/20",
       badgeColor: "bg-violet-500/10 text-violet-400 border-violet-500/30",
+      link: "https://media.licdn.com/dms/image/v2/D562DAQFSHaI__bIIRA/profile-treasury-image-shrink_1920_1920/B56Z77EPfSG0Ac-/0/1782328653999?e=1788238800&v=beta&t=JsA9oVrIqwW2N6PE0ReWgV8TXJLgXsUx_xJlmeXgkpc",
     },
     {
       title: "Gen-AI Powered Data Analytics",
@@ -83,6 +89,7 @@ export function Certifications() {
       skills: ["Gen-AI Analytics", "Data Insights", "AI Workflows"],
       issuerColor: "from-cyan-600/20 to-blue-500/20",
       badgeColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
+      link: "https://media.licdn.com/dms/image/v2/D4D2DAQErv7_oHu2b-Q/profile-treasury-document-images_1280/B4DZlSdlp9JAAU-/1/1758025114123?e=1788393600&v=beta&t=6j1TW-bw_wOG04xm2nnouiy78SYpS8aQsgzTn4YjN08",
     },
   ]
 
@@ -111,56 +118,72 @@ export function Certifications() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {certifications.map((cert, index) => (
-            <Card
+            <a
               key={index}
-              className={`relative overflow-hidden p-6 bg-card/40 backdrop-blur-xl border border-border/80 hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 group flex flex-col justify-between ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
             >
-              {/* Top ambient color glow */}
-              <div
-                className={`absolute -top-12 -right-12 w-32 h-32 bg-gradient-to-br ${cert.issuerColor} rounded-full blur-2xl opacity-40 group-hover:opacity-80 transition-opacity duration-500`}
-              />
+              <Card
+                className={`relative overflow-hidden p-6 bg-card/40 backdrop-blur-xl border border-border/80 hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col justify-between h-full ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                {/* Top ambient color glow */}
+                <div
+                  className={`absolute -top-12 -right-12 w-32 h-32 bg-gradient-to-br ${cert.issuerColor} rounded-full blur-2xl opacity-40 group-hover:opacity-80 transition-opacity duration-500`}
+                />
 
-              <div>
-                {/* Header Icon & Category Badge */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 border border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-md">
-                    <Award className="w-6 h-6 text-primary" />
+                <div>
+                  {/* Header Icon, Category Badge & External Link */}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 border border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-md">
+                      <Award className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Badge className={`${cert.badgeColor} text-[11px] font-semibold px-2.5 py-0.5 border shadow-sm`}>
+                        {cert.category}
+                      </Badge>
+                      <div className="p-1.5 rounded-lg bg-primary/10 text-primary opacity-80 group-hover:opacity-100 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </div>
+                    </div>
                   </div>
-                  <Badge className={`${cert.badgeColor} text-[11px] font-semibold px-2.5 py-0.5 border shadow-sm`}>
-                    {cert.category}
-                  </Badge>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 leading-snug mb-3 flex items-center gap-1.5">
+                    <span>{cert.title}</span>
+                  </h3>
+
+                  {/* Issuer with Checkmark */}
+                  <div className="flex items-center gap-1.5 mb-5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span className="text-sm font-semibold text-foreground/90">{cert.issuer}</span>
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 leading-snug mb-3">
-                  {cert.title}
-                </h3>
-
-                {/* Issuer with Checkmark */}
-                <div className="flex items-center gap-1.5 mb-5">
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-sm font-semibold text-foreground/90">{cert.issuer}</span>
+                {/* Skills Badges & Link Indicator */}
+                <div className="pt-4 border-t border-border/50 mt-auto flex flex-col gap-3">
+                  <div className="flex flex-wrap gap-1.5">
+                    {cert.skills.map((skill, i) => (
+                      <Badge
+                        key={i}
+                        variant="secondary"
+                        className="text-[11px] px-2.5 py-0.5 bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex items-center text-xs font-semibold text-primary group-hover:underline pt-1">
+                    <span>Verify Credential</span>
+                    <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
-              </div>
-
-              {/* Skills Badges */}
-              <div className="pt-4 border-t border-border/50 mt-auto">
-                <div className="flex flex-wrap gap-1.5">
-                  {cert.skills.map((skill, i) => (
-                    <Badge
-                      key={i}
-                      variant="secondary"
-                      className="text-[11px] px-2.5 py-0.5 bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
           ))}
         </div>
       </div>

@@ -127,12 +127,36 @@ const PORTFOLIO_DATA = {
     },
   ],
   certifications: [
-    { title: "Microsoft Certified: Microsoft Fabric Analytic Engineer Associate", issuer: "Microsoft" },
-    { title: "Deloitte Data Analytics Job Simulation", issuer: "Deloitte" },
-    { title: "Tata Data Visualization: Empowering Business with Effective Insights", issuer: "Tata" },
-    { title: "Data Science - AI/ML", issuer: "Coding Spoon" },
-    { title: "AI & Machine Learning: Generative AI, Agentic Systems and MLOps Deployment", issuer: "Coding Spoon" },
-    { title: "Gen-AI Powered Data Analytics", issuer: "Tata" },
+    {
+      title: "Microsoft Certified: Microsoft Fabric Analytic Engineer Associate",
+      issuer: "Microsoft",
+      link: "https://learn.microsoft.com/en-us/users/mdarshadraza-9533/credentials/3663bee1c0f5bcda?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+    },
+    {
+      title: "Deloitte Data Analytics Job Simulation",
+      issuer: "Deloitte",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_RFMxjsKGNCoN8v4eH_1751344385872_completion_certificate.pdf",
+    },
+    {
+      title: "Tata Data Visualization: Empowering Business with Effective Insights",
+      issuer: "Tata",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_RFMxjsKGNCoN8v4eH_1756805632601_completion_certificate.pdf",
+    },
+    {
+      title: "Data Science - AI/ML",
+      issuer: "Coding Spoon",
+      link: "https://github.com/ARSHAD-12356/Certification/blob/main/Data%20Sceince.pdf",
+    },
+    {
+      title: "AI & Machine Learning: Generative AI, Agentic Systems and MLOps Deployment",
+      issuer: "Coding Spoon",
+      link: "https://media.licdn.com/dms/image/v2/D562DAQFSHaI__bIIRA/profile-treasury-image-shrink_1920_1920/B56Z77EPfSG0Ac-/0/1782328653999?e=1788238800&v=beta&t=JsA9oVrIqwW2N6PE0ReWgV8TXJLgXsUx_xJlmeXgkpc",
+    },
+    {
+      title: "Gen-AI Powered Data Analytics",
+      issuer: "Tata",
+      link: "https://media.licdn.com/dms/image/v2/D4D2DAQErv7_oHu2b-Q/profile-treasury-document-images_1280/B4DZlSdlp9JAAU-/1/1758025114123?e=1788393600&v=beta&t=6j1TW-bw_wOG04xm2nnouiy78SYpS8aQsgzTn4YjN08",
+    },
   ],
   contact: {
     phones: ["8873867316", "9142312801"],
@@ -222,7 +246,7 @@ export function AIChatbot() {
 
     // Certifications - exact list
     if (input.match(/certifications?|certificates?|credentials?|certified/)) {
-      return `**Certifications** (${PORTFOLIO_DATA.certifications.length} total)\n\n${PORTFOLIO_DATA.certifications.map((c, i) => `${i + 1}. ${c.title}\n   Issued by: ${c.issuer}`).join("\n\n")}`
+      return `**Certifications** (${PORTFOLIO_DATA.certifications.length} total)\n\n${PORTFOLIO_DATA.certifications.map((c, i) => `${i + 1}. **${c.title}**\n   Issued by: ${c.issuer}\n   [View Credential](${c.link})`).join("\n\n")}`
     }
 
     // Contact - EXACT information as specified
